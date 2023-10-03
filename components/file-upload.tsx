@@ -4,8 +4,6 @@ import { FileIcon, X } from "lucide-react";
 import { UploadDropzone } from "@/lib/uploadthing";
 import Image from "next/image";
 
-import "@uploadthing/react/styles.css";
-
 interface FileUploadProps {
   onChange: (url?: string) => void;
   value: string;
