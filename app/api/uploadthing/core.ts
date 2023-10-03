@@ -16,7 +16,7 @@ export const ourFileRouter = {
       console.log("Server-side onUploadComplete triggered", metadata, file);
       console.log("File URL", file.url);
     }),
-  messageFile: f(["image", "pdf"])
+  messageFile: f(["image", "pdf", "video"])
     .middleware(() => handleAuth())
     .onUploadComplete(() => {}),
 } satisfies FileRouter;
