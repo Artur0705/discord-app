@@ -8,7 +8,7 @@ import qs from "query-string";
 
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Plus } from "lucide-react";
+import { Plus, Send } from "lucide-react";
 import { useModal } from "@/hooks/use-modal-store";
 import { EmojiPicker } from "@/components/emoji-picker";
 import { useRouter } from "next/navigation";
@@ -79,10 +79,9 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
                         p-1
                         flex
                         items-center
-                        justify-center
-                   "
+                        justify-center"
                   >
-                    <Plus className="text-whiite dark:text-[#313338]" />
+                    <Plus className="text-white dark:text-[#313338]" />
                   </button>
                   <Input
                     disabled={isLoading}
@@ -109,6 +108,23 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
                         field.onChange(`${field.value} ${emoji}`)
                       }
                     />
+                  </div>
+                  <div
+                    className="
+                    absolute 
+                    top-7 
+                    right-8 
+                    mr-10
+                    h-[24px] 
+                    w-[24px] 
+                    text-zinc-500 
+                    dark:text-zinc-400 
+                    hover:text-zinc-700
+                    dark:hover:text-zinc-300
+                    transition
+                    cursor-pointer"
+                  >
+                    <Send onClick={form.handleSubmit(onSubmit)} />
                   </div>
                 </div>
               </FormControl>
