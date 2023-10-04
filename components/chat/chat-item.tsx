@@ -227,6 +227,14 @@ export const ChatItem = ({
                 <Button disabled={isLoading} size="sm" variant="primary">
                   Save
                 </Button>
+                <Button
+                  onClick={() => setIsEditing(false)}
+                  disabled={isLoading}
+                  size="sm"
+                  variant="secondary"
+                >
+                  Close
+                </Button>
               </form>
               <span className="text-[10px] mt-1 text-zinc-400">
                 Press Esc button to cancel, enter to save
